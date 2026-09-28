@@ -20,6 +20,8 @@ function stripCspInDev(): Plugin {
 }
 
 export default defineConfig({
+  // Relative asset paths so the built page works on GitHub Pages and locally.
+  base: "./",
   plugins: [react(), stripCspInDev()],
   test: {
     environment: "node",
